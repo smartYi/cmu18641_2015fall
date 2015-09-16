@@ -1,0 +1,8 @@
+package parkingSimulator;
+
+public class parkingTicket {
+	parkedCar legalCar;
+	public parkingTicket(parkedCar parkedcar){
+		this.legalCar = parkedcar;
+	}
+}

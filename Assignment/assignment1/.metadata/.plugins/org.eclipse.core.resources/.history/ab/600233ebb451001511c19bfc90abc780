@@ -1,0 +1,38 @@
+package parkingSimulator;
+
+public class policeOfficer {
+	//Instance variables
+	private String name;
+	private String badge;
+	
+	//Setters and getters
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getBadge() {
+		return badge;
+	}
+	public void setBadge(String badge) {
+		this.badge = badge;
+	}
+	
+	public boolean isIllegal(parkedCar parkedcar, parkingMeter parkingmeter){
+		if(parkedcar.getParkedMinutes()>parkingmeter.getPurchasedMinutes()) return true;
+		else return false;
+	}
+	
+	public void issueTicket(parkedCar parkedcar, parkingMeter parkingmeter){
+		boolean isillegal = isIllegal(parkedcar,parkingmeter);
+		if(isillegal){
+			parkingTicket parkingticket = new parkingTicket(parkedcar);
+			System.out.println("This car has used up its time !");
+		}
+		else{
+			System.out.println("This car is legal");
+		}
+	}
+	
+}

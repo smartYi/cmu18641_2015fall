@@ -1,0 +1,18 @@
+package parkingSimulator;
+
+public class test {
+	public static void main(String[] args){
+		parkingMeter parkingmeter = new parkingMeter();
+		parkingmeter.setPurchasedMinutes(100);
+		parkedCar mycar = new parkedCar(parkingmeter);
+		mycar.setMake("Toyota");
+		mycar.setModel("GTR");
+		mycar.setColor("red");
+		mycar.setLicenseNumber("PHD-ING");
+		mycar.setParkedMinutes(279);
+		
+		policeOfficer police = new policeOfficer("John","5901");
+		police.issueTicket(mycar, parkingmeter);
+		
+	}
+}

@@ -1,0 +1,27 @@
+package coin;
+
+/*
+@Author--Yi Qiu
+@Date--Sep/04/2015
+*/
+
+public class Simulation {
+	String temp;                                 //To store the current facing up of this coin
+	int headCount = 0;                           //To store the number of head facing up
+	int tailsCount = 0;                          //To store the number of tails facing up
+	
+	public Simulation(Coin coin){                //Print out the initial facing up.
+		System.out.println("The initial facing up is "+coin.sideUp);
+	}
+	public void TossConstructor(Coin coin){      //When called, 20 times toss are conducted and print out their results.
+		for(int i=0;i<20;i++){
+		coin.toss();
+		coin.display(i);
+		temp = coin.getSideUp();
+		if(temp=="head") headCount++;
+		else tailsCount++;
+	}
+		System.out.println("After 20 toss, the number od head is "+headCount+", and the number of tails is "+tailsCount);
+	}
+}
+

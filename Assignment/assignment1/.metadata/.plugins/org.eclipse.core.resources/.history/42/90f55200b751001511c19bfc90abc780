@@ -1,0 +1,7 @@
+package parkingSimulator;
+
+public class test {
+	public static void main(){
+		parkedCar mycar = new parkedCar();
+	}
+}

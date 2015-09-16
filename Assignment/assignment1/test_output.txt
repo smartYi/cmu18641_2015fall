@@ -1,0 +1,116 @@
+Assignment 1
+
+Part a: Coin Toss
+
+In this part, two experiments are involved.
+
+Case 1: 
+The initial facing up is tails
+Result 1 = tails
+Result 2 = head
+Result 3 = head
+Result 4 = head
+Result 5 = head
+Result 6 = tails
+Result 7 = head
+Result 8 = tails
+Result 9 = tails
+Result 10 = tails
+Result 11 = tails
+Result 12 = tails
+Result 13 = tails
+Result 14 = tails
+Result 15 = tails
+Result 16 = head
+Result 17 = head
+Result 18 = tails
+Result 19 = tails
+Result 20 = head
+After 20 toss, the number of head is 8, and the number of tails is 12
+
+
+Case 2:
+The initial facing up is head
+Result 1 = tails
+Result 2 = head
+Result 3 = head
+Result 4 = tails
+Result 5 = head
+Result 6 = tails
+Result 7 = tails
+Result 8 = tails
+Result 9 = head
+Result 10 = head
+Result 11 = tails
+Result 12 = tails
+Result 13 = tails
+Result 14 = head
+Result 15 = tails
+Result 16 = head
+Result 17 = tails
+Result 18 = head
+Result 19 = head
+Result 20 = tails
+After 20 toss, the number of head is 9, and the number of tails is 11
+
+Case 3:
+The initial facing up is head
+Result 1 = tails
+Result 2 = head
+Result 3 = head
+Result 4 = tails
+Result 5 = head
+Result 6 = head
+Result 7 = head
+Result 8 = head
+Result 9 = tails
+Result 10 = tails
+Result 11 = tails
+Result 12 = tails
+Result 13 = tails
+Result 14 = head
+Result 15 = head
+Result 16 = tails
+Result 17 = head
+Result 18 = tails
+Result 19 = tails
+Result 20 = tails
+After 20 toss, the number of head is 9, and the number of tails is 11
+
+
+
+Part b: Parking ticket simulator
+
+In this part, 4 experiments are involved that is parkedvehicle is with in, out of and just in the parking time purchased
+and ticketing under 1 hour and more than 1 hour test cases.
+
+In the following 4 experiments, I set the purchased parking time is 100 minutes.
+
+Case 1: Within the parking time purchased
+
+The car has purchased 100 minutes
+And this car has parked 60 minutes
+So this car is legal
+
+Case 2: Just the parking purchased
+
+The car has purchased 100 minutes
+And this car has parked 100 minutes
+So this car is legal
+
+Case 3: Out of the parking time purchased but within 1 hour
+
+This car has used up its time !
+The car has purchased 100 minutes
+While this car has parked 150 minutes
+So the illegal car maker is Toyota, car model is GTR, car color is red, car license number is PHD-ING, and the fine is 25 $
+The policeofficer name is John, and badge number is 5901
+
+Case 4: Out of the parking purchased but more than 1 hour
+
+This car has used up its time !
+The car has purchased 100 minutes
+While this car has parked 180 minutes
+So the illegal car maker is Toyota, car model is GTR, car color is red, car license number is PHD-ING, and the fine is 35 $
+The policeofficer name is John, and badge number is 5901
+

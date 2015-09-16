@@ -1,0 +1,16 @@
+package parkingSimulator;
+
+public class parkingTicket {
+	parkedCar legalcar;
+	public parkingTicket(parkedCar parkedcar){
+		this.legalcar = parkedcar;
+	}
+	
+	public int fineNumber(){
+		int fine;
+		return fine;
+	}
+	public String toString(){
+		return ("Car maker is "+legalcar.getMake()+", car model is "+legalcar.getModel()+", car color is "+legalcar.getColor()+", car license number is"+legalcar.getLicenseNumber());
+	}
+}

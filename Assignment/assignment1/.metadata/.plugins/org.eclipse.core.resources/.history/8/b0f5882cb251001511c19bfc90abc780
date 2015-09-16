@@ -1,0 +1,46 @@
+package parkingSimulator;
+
+public class parkedCar {
+	//Instance variables
+	private String make;
+	private String model;
+	private String color;
+	private String licenseNumber;
+	private int parkedMinutes;
+	private parkingMeter parkingmeter;
+	
+	public parkedCar(){
+		parkingmeter = new parkingMeter();
+	}
+	//Setters and getters
+	public String getMake() {
+		return make;
+	}
+	public void setMake(String make) {
+		this.make = make;
+	}
+	public String getModel() {
+		return model;
+	}
+	public void setModel(String model) {
+		this.model = model;
+	}
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+	public String getLicenseNumber() {
+		return licenseNumber;
+	}
+	public void setLicenseNumber(String licenseNumber) {
+		this.licenseNumber = licenseNumber;
+	}
+	public int getParkedMinutes() {
+		return parkedMinutes;
+	}
+	public void setParkedMinutes(int parkedMinutes) {
+		this.parkedMinutes = parkedMinutes;
+	}
+}

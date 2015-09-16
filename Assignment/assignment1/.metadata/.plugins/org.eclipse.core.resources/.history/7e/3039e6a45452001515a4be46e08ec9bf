@@ -1,0 +1,18 @@
+package parkingSimulator;
+
+public class ParkingMeter {
+	//Instance variables
+	private int purchasedminutes;    //Parking minutes that this car has purchased 
+
+	//Getters and Setters
+	public int getPurchasedMinutes() {
+		return purchasedminutes;
+	}
+
+	public void setPurchasedMinutes(int purchasedminutes) {
+		this.purchasedminutes = purchasedminutes;
+	}
+	
+	
+	
+}

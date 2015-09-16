@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="parkingSimulator.parkingMeter" x="82" y="65">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="parkingSimulator.policeOfficer" x="34" y="278">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="parkingSimulator.parkingMeter"/>
+        <Communication destinationClassName="parkingSimulator.parkedCar"/>
+    </Class>
+    <Class name="parkingSimulator.parkingTicket" x="268" y="332">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="parkingSimulator.parkingMeter"
+            endpointName="legalminutes" kind="Simple"/>
+        <Association destinationClassName="parkingSimulator.parkedCar"
+            endpointName="legalcar" kind="Simple"/>
+        <Communication destinationClassName="parkingSimulator.parkingMeter"/>
+        <Communication destinationClassName="parkingSimulator.parkedCar"/>
+    </Class>
+    <Class name="parkingSimulator.parkedCar" x="309" y="78">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="parkingSimulator.parkingMeter"
+            endpointName="parkingmeter" kind="Simple"/>
+    </Class>
+</ClassDiagram>

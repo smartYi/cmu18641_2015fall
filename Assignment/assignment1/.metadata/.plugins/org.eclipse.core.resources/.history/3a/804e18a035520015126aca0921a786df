@@ -1,0 +1,23 @@
+package parkingSimulator;
+
+public class parkingTicket {
+	
+	
+	public int fineNumber(parkedCar legalcar,parkingMeter legalminutes){
+		int fine;
+		int overflow = legalcar.getParkedMinutes()-legalminutes.getPurchasedMinutes();
+		if(overflow<=60) fine = 25;
+		else if(overflow%60==0){
+			fine = 25+10*((overflow/60)-1);
+		}
+		else{
+			fine = 25+10*(overflow/60);
+		}
+		return fine;
+	}
+	public String toString(){
+		String result = "The illegal car maker is "+legalcar.getMake()+", car model is "+legalcar.getModel()+", car color is "+legalcar.getColor()+", car license number is"+legalcar.getLicenseNumber();
+		result = result+", and the fine is "+fineNumber();
+		return result;
+	}
+}
