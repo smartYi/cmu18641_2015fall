@@ -1,0 +1,146 @@
+Part A test results:
+
+Test begin!
+-----------------------------------------------------------
+1: Test FileMissingException, InvalidFileType and BlankFile.
+---------------------------------------
+The error code is: 2
+Error is: You do not input a file name and input your file name again !
+Please input your new file name: 
+a.java
+The error code is: 3
+Error is: The file type is invalid !
+Please input your new file name: 
+Blank.txt
+The error code is: 1
+Error is: The file is blank !
+Please input your new file name: 
+FordZTW2.txt
+The error code is: 5
+Error is: The option price is missing !
+You lost the price of option ABS in option set Brakers
+Please input your option price: 
+123
+The error code is: 4
+Error is: The option name is missing !
+You lost the option name in option set Power Moonroof
+Please input your option name: 
+Myoption
+Below is information: 
+The following information is model basic information: 
+
+# Car model: Focus Wagon ZTW
+# Base price: $18445.00
+
+The following information is model additional information: 
+
+#Color: 
+Fort Knox Gold Clearcoat Metallic: $0.00
+Liquid Grey Clearcoat Metallic: $0.00
+Infra-Red Clearcoat: $0.00
+Grabber Green Clearcoat Metallic: $0.00
+Sangria Red Clearcoat Metallic: $0.00
+French Blue Clearcoat Metallic: $0.00
+Twilight Blue Clearcoat Metallic: $0.00
+CD Silver Clearcoat Metallic: $0.00
+Pitch Black Clearcoat: $0.00
+Cloud 9 White Clearcoat: $0.00
+
+#Transmission: 
+automatic: $0.00
+manual: $-815.00
+
+#Brakers: 
+Standard: $0.00
+ABS: $123.00
+ABS with Advance Trac: $1625.00
+
+#Side Impact Air Bags: 
+present: $350.00
+not present: $0.00
+
+#Power Moonroof: 
+Myoption: $595.00
+not present: $0.00
+
+--------------------------------------------
+-----------------------------------------------------------
+Test update option set name!
+The following information is model basic information: 
+
+# Car model: Focus Wagon ZTW
+# Base price: $18445.00
+
+The following information is model additional information: 
+
+#Color: 
+Fort Knox Gold Clearcoat Metallic: $0.00
+Liquid Grey Clearcoat Metallic: $0.00
+Infra-Red Clearcoat: $0.00
+Grabber Green Clearcoat Metallic: $0.00
+Sangria Red Clearcoat Metallic: $0.00
+French Blue Clearcoat Metallic: $0.00
+Twilight Blue Clearcoat Metallic: $0.00
+CD Silver Clearcoat Metallic: $0.00
+Pitch Black Clearcoat: $0.00
+Cloud 9 White Clearcoat: $0.00
+
+#Transmission: 
+automatic: $0.00
+manual: $-815.00
+
+#Control Device: 
+Standard: $0.00
+ABS: $400.00
+ABS with Advance Trac: $1625.00
+
+#Side Impact Air Bags: 
+present: $350.00
+not present: $0.00
+
+#Power Moonroof: 
+present: $595.00
+not present: $0.00
+
+--------------------------------------------
+-----------------------------------------------------------
+Test update option price!
+The following information is model basic information: 
+
+# Car model: Focus Wagon ZTW
+# Base price: $18445.00
+
+The following information is model additional information: 
+
+#Color: 
+Fort Knox Gold Clearcoat Metallic: $0.00
+Liquid Grey Clearcoat Metallic: $0.00
+Infra-Red Clearcoat: $0.00
+Grabber Green Clearcoat Metallic: $0.00
+Sangria Red Clearcoat Metallic: $0.00
+French Blue Clearcoat Metallic: $0.00
+Twilight Blue Clearcoat Metallic: $0.00
+CD Silver Clearcoat Metallic: $0.00
+Pitch Black Clearcoat: $0.00
+Cloud 9 White Clearcoat: $0.00
+
+#Transmission: 
+automatic: $0.00
+manual: $-815.00
+
+#Control Device: 
+Standard: $0.00
+ABS: $400.00
+ABS with Advance Trac: $1625.00
+
+#Side Impact Air Bags: 
+present: $350.00
+not present: $0.00
+
+#Power Moonroof: 
+present: $790.00
+not present: $0.00
+
+--------------------------------------------
+
+
