@@ -1,0 +1,48 @@
+Client: Creating a client!
+1): Upload car model:
+2): Configure a car:
+Enter your choice: 1 or 2:
+1
+There are 4 car models in model library. Select one you want to upload: 
+1
+Server: Properties file accepted!
+Server: Build automobile model....
+Server: Car model build completed!
+Do you want to upload car model or configure a car? y/n?
+y
+Client: Creating a client!
+1): Upload car model:
+2): Configure a car:
+Enter your choice: 1 or 2:
+1
+There are 4 car models in model library. Select one you want to upload: 
+2
+Server: Properties file accepted!
+Server: Build automobile model....
+Server: Car model build completed!
+Do you want to upload car model or configure a car? y/n?
+y
+Client: Creating a client!
+1): Upload car model:
+2): Configure a car:
+Enter your choice: 1 or 2:
+1
+There are 4 car models in model library. Select one you want to upload: 
+3
+Server: Properties file accepted!
+Server: Build automobile model....
+Server: Car model build completed!
+Do you want to upload car model or configure a car? y/n?
+y
+Client: Creating a client!
+1): Upload car model:
+2): Configure a car:
+Enter your choice: 1 or 2:
+1
+There are 4 car models in model library. Select one you want to upload: 
+4
+Client: here
+Server: Txt file accepted!
+Server: Build automobile model....
+Server: Car model build completed!
+Do you want to upload car model or configure a car? y/n?

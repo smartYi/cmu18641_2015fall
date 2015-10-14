@@ -1,0 +1,34 @@
+package server;
+
+import java.util.LinkedHashMap;
+import java.util.Properties;
+import adapter.BuildAuto;
+import model.Automobile;
+
+public class BuildCarModelOptions implements AutoServer{
+	
+	private static BuildAuto buildAuto = null;
+	
+	public BuildCarModelOptions() {
+		buildAuto = new BuildAuto();
+	}
+	
+	/**
+	 * This method is to build an automobile from property file.
+	 * But this method will call another method in ProxyAutomobile.
+	 */
+	public void buildAutoFromProperty(Properties properties) {
+		buildAuto.buildAutoFromProperty(properties);
+	}
+	
+	/**
+	 * This method is to provide a list of models to the client.
+	 */
+	public LinkedHashMap<String, Automobile> provideModelsToClient() {
+		return buildAuto.provideModelsToClient();
+	}
+	
+	public void buildAutoFromTxt(String fileName) throws{
+		buildAuto.buildAutoFromTxt(fileName);
+	}
+}

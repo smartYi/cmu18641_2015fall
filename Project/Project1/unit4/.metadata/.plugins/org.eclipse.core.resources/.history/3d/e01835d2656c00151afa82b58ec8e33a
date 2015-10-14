@@ -1,0 +1,10 @@
+package client;
+
+import model.Automobile;
+
+public class SelectCarOption {
+	
+	public void setChoice(Automobile automobile) {
+		
+	}
+}

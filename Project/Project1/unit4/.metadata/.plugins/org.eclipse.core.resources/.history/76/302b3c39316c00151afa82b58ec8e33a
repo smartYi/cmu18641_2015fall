@@ -1,0 +1,36 @@
+package client;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class Client {
+	
+	private static final int PORT = 8888;
+	private static final String fileSets = "./fileSets.txt";
+
+	
+	public static void main(String[] args) {
+		
+		Socket socket = null;
+		CarModelOptionsIO carModelOptionsIO = null;
+		
+		//Create a client
+		try{
+			System.out.println("Client: Creating a client!");
+			socket = new Socket("localhost",PORT);
+		}catch(UnknownHostException unknownHostException) {
+			unknownHostException.printStackTrace();
+		}catch (IOException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		
+		DefaultSocketClient defaultSocketClient = new DefaultSocketClient(socket);
+		//Then by class CarModelOptionsIO, create property and pass the property to server.
+		carModelOptionsIO = new CarModelOptionsIO(socket);
+		carModelOptionsIO.getFileName(fileSets);
+		carModelOptionsIO.readProperty();
+	}
+}

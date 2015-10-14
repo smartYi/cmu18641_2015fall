@@ -1,0 +1,63 @@
+package client;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
+import java.util.ArrayList;
+import java.util.Properties;
+
+public class CarModelOptionsIO {
+	
+	DefaultSocketClient defaultSocketClient = null;
+	
+	/**
+	 * Constructor with socket as argument.
+	 * @param socket
+	 */
+	public CarModelOptionsIO(Socket socket) {
+		defaultSocketClient = new DefaultSocketClient(socket);
+	}
+	
+	/**
+	 * This method is to get different model names.
+	 * @param fileSets
+	 * @return
+	 */
+	public ArrayList<String> getFileName(String fileSets) {
+		String propertyName;
+		BufferedReader bufferedReader = null;
+		try{
+			bufferedReader = new BufferedReader(new FileReader(fileSets));
+			
+			//Read different model files
+			
+			while((propertyName = bufferedReader.readLine())!= null) {
+				fileName.add(propertyName);
+			}
+		}catch(IOException e) {
+			System.out.println("Can not open file!");
+			e.printStackTrace();
+		}
+		return fileName;
+	}
+	
+	/**
+	 * This method is to read property from property file and transfer the object from client to server.
+	 */
+	public void readProperty() {
+		
+		for(int i=0;i<fileName.size();i++) {
+			Properties properties = new Properties();
+			try{
+				FileInputStream fileInputStream = new FileInputStream(fileName.get(i));
+				properties.load(fileInputStream);
+				objectOutputStream.writeObject(properties);
+			}catch(IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}

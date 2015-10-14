@@ -1,0 +1,21 @@
+package server;
+
+import java.util.Properties;
+import adapter.BuildAuto;
+
+public class BuildCarModelOptions implements AutoServer{
+	
+	private static BuildAuto buildAuto = null;
+	
+	public BuildCarModelOptions() {
+		buildAuto = new BuildAuto();
+	}
+	
+	/**
+	 * This method is to build an automobile from property file.
+	 * But this method will call another method in ProxyAutomobile.
+	 */
+	public void buildAutoFromProperty(Properties properties) {
+		buildAuto.buildAutoFromProperty(properties);
+	}
+}

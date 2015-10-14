@@ -1,0 +1,50 @@
+package server;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+
+public class Server {
+	
+	
+	
+	//Main function for server.
+	public static void main(String[] args) {
+		DefaultSocketClient defaultSocketClient = new DefaultSocketClient();
+//		//Create a server.
+//		try{
+//			serverSocket = new ServerSocket(PORT);
+//			}catch(IOException exception) {
+//				System.out.println("Could not listen to port: #" + PORT);
+//				exception.printStackTrace();
+//				System.exit(1);
+//				}
+//		System.out.println("Listen to server port #" + PORT);
+//		System.out.println("Server waiting to connect!");
+		
+		//Process request
+//		processRequest(serverSocket);
+}
+	
+	/**
+	 * This method is to take an incoming request and process it.
+	 * @param serverSocket
+	 */
+//	public static void processRequest(ServerSocket serverSocket) {
+//		
+//		DefaultSocketClient defaultSocketClient = null;
+//		
+//		try{
+//			Socket socket = serverSocket.accept();
+//			//Create a thread for a request.
+//			defaultSocketClient = new DefaultSocketClient(socket);
+//			defaultSocketClient.start();
+//		}catch(IOException e) {
+//			System.out.println("Can not accept!");
+//			e.printStackTrace();
+//		}
+//	}
+	
+}

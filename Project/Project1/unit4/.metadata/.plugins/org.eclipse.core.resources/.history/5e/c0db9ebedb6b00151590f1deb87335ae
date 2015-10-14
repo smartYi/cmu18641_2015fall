@@ -1,0 +1,28 @@
+package client;
+
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class Client {
+	
+	private static final int PORT = 8888;
+	
+	public static void main(String[] args) {
+		
+		Socket socket = nul;
+		CarModelOptionsIO carModelOptionsIO = null;
+		//Create a client
+		try{
+			Socket socket = new Socket(InetAddress.getLocalHost(),PORT);
+		}catch(UnknownHostException unknownHostException) {
+			unknownHostException.printStackTrace();
+		}catch (IOException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		
+		carModelOptionsIO.readPropertyFile(socket);
+	}
+}

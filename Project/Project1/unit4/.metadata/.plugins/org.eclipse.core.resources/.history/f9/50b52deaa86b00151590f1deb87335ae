@@ -1,0 +1,8 @@
+package server;
+
+public class BuildCarModelOptions implements AutoServer{
+	
+	public void buildFromProperty() {
+		
+	}
+}

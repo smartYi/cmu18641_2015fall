@@ -1,0 +1,45 @@
+package client;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.net.Socket;
+import java.util.ArrayList;
+
+public class CarModelOptionsIO {
+	
+	ObjectOutputStream objectOutputStream = null;
+	ArrayList<String> fileName = new ArrayList<String>();
+	
+	public CarModelOptionsIO(Socket socket) {
+		try{
+			objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
+		}catch(IOException e) {
+			System.out.println("Can not get client output stream!");
+			e.printStackTrace();
+		}
+	}
+	
+	public ArrayList<String> getFileName(String fileSets) {
+		String propertyName;
+		BufferedReader bufferedReader = null;
+		try{
+			bufferedReader = new BufferedReader(new FileReader(fileSets));
+			
+			//Read different model files
+			
+			while((propertyName = bufferedReader.readLine())!= null) {
+				fileName.add(propertyName);
+			}
+		}catch(IOException e) {
+			System.out.println("Can not open file!");
+			e.printStackTrace();
+		}
+		return fileName;
+	}
+	
+	public void readProperty() {
+		
+	}
+}

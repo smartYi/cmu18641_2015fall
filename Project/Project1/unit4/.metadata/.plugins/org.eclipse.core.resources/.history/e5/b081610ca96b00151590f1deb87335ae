@@ -1,0 +1,19 @@
+package server;
+
+import model.Automobile;
+
+public class BuildCarModelOptions implements AutoServer{
+	
+	private static Automobile automobile = null;
+	
+	public BuildCarModelOptions() {
+		automobile = new Automobile();
+	}
+	
+	/**
+	 * This method is to build an automobile from property.
+	 */
+	public void buildFromProperty() {
+		
+	}
+}

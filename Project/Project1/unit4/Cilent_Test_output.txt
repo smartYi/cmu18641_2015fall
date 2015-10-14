@@ -1,0 +1,242 @@
+Client: Creating a client!
+Server: I am server, ready to connect!
+1): Upload car model:
+2): Configure a car:
+Enter your choice: 1 or 2:
+1
+There are 4 car models in model library. Select one you want to upload: 
+1
+Server: Properties file accepted!
+Server: Build automobile model....
+Server: Car model build completed!
+Do you want to upload car model or configure a car? y/n?
+y
+Client: Creating a client!
+Server: I am server, ready to connect!
+1): Upload car model:
+2): Configure a car:
+Enter your choice: 1 or 2:
+1
+There are 4 car models in model library. Select one you want to upload: 
+2
+Server: Properties file accepted!
+Server: Build automobile model....
+Server: Car model build completed!
+Do you want to upload car model or configure a car? y/n?
+y
+Client: Creating a client!
+Server: I am server, ready to connect!
+1): Upload car model:
+2): Configure a car:
+Enter your choice: 1 or 2:
+1
+There are 4 car models in model library. Select one you want to upload: 
+3
+Server: Properties file accepted!
+Server: Build automobile model....
+Server: Car model build completed!
+Do you want to upload car model or configure a car? y/n?
+y
+Client: Creating a client!
+Server: I am server, ready to connect!
+1): Upload car model:
+2): Configure a car:
+Enter your choice: 1 or 2:
+1
+There are 4 car models in model library. Select one you want to upload: 
+4
+Server: Txt file accepted!
+Server: Build automobile model....
+Server: Car model build completed!
+Do you want to upload car model or configure a car? y/n?
+y
+Client: Creating a client!
+Server: I am server, ready to connect!
+1): Upload car model:
+2): Configure a car:
+Enter your choice: 1 or 2:
+2
+Available car model: 
+Focus Wagon ZTW Base price is: 18445.0
+Copper Mini Copper Base price is: 15000.0
+Toyota Crola Base price is: 20000.0
+BMW X5 Base price is: 30000.0
+Input your wanted car model: 
+X5
+Model received!
+Here is the model information:
+The following information is model basic information: 
+
+# Car model: X5
+# Base price: $30000.00
+
+The following information is model additional information: 
+
+#Color: 
+Fort Knox Gold Clearcoat Metallic: $0.00
+Liquid Grey Clearcoat Metallic: $0.00
+Infra-Red Clearcoat: $0.00
+Grabber Green Clearcoat Metallic: $0.00
+Sangria Red Clearcoat Metallic: $0.00
+French Blue Clearcoat Metallic: $0.00
+Twilight Blue Clearcoat Metallic: $0.00
+CD Silver Clearcoat Metallic: $0.00
+Pitch Black Clearcoat: $0.00
+Cloud 9 White Clearcoat: $0.00
+
+#Transmission: 
+automatic: $0.00
+manual: $-815.00
+
+#Brakers: 
+Standard: $0.00
+ABS: $400.00
+ABS with Advance Trac: $1625.00
+
+#Side Impact Air Bags: 
+present: $350.00
+not present: $0.00
+
+#Power Moonroof: 
+present: $595.00
+not present: $0.00
+
+--------------------------------------------
+Press any key to set up your own car!
+
+Please choose the Color
+1. Fort Knox Gold Clearcoat Metallic. Price: $0.0
+2. Liquid Grey Clearcoat Metallic. Price: $0.0
+3. Infra-Red Clearcoat. Price: $0.0
+4. Grabber Green Clearcoat Metallic. Price: $0.0
+5. Sangria Red Clearcoat Metallic. Price: $0.0
+6. French Blue Clearcoat Metallic. Price: $0.0
+7. Twilight Blue Clearcoat Metallic. Price: $0.0
+8. CD Silver Clearcoat Metallic. Price: $0.0
+9. Pitch Black Clearcoat. Price: $0.0
+10. Cloud 9 White Clearcoat. Price: $0.0
+4
+Please choose the Transmission
+1. automatic. Price: $0.0
+2. manual. Price: $-815.0
+2
+Please choose the Brakers
+1. Standard. Price: $0.0
+2. ABS. Price: $400.0
+3. ABS with Advance Trac. Price: $1625.0
+1
+Please choose the Side Impact Air Bags
+1. present. Price: $350.0
+2. not present. Price: $0.0
+1
+Please choose the Power Moonroof
+1. present. Price: $595.0
+2. not present. Price: $0.0
+2
+Your car model has been set, Here is your car information:
+This is your model information: 
+Model name: X5
+Color: Grabber Green Clearcoat Metallic: 0.0
+Transmission: manual: -815.0
+Brakers: Standard: 0.0
+Side Impact Air Bags: present: 350.0
+Power Moonroof: not present: 0.0
+Next is your model total price: 
+Total price: $29535.0
+Do you want to upload car model or configure a car? y/n?
+y
+Client: Creating a client!
+Server: I am server, ready to connect!
+1): Upload car model:
+2): Configure a car:
+Enter your choice: 1 or 2:
+2
+Available car model: 
+Focus Wagon ZTW Base price is: 18445.0
+Copper Mini Copper Base price is: 15000.0
+Toyota Crola Base price is: 20000.0
+BMW X5 Base price is: 30000.0
+Input your wanted car model: 
+Mini Copper
+Model received!
+Here is the model information:
+The following information is model basic information: 
+
+# Car model: Mini Copper
+# Base price: $15000.00
+
+The following information is model additional information: 
+
+#Color: 
+Fort Knox Gold Clearcoat Metallic: $0.00
+Liquid Grey Clearcoat Metallic: $0.00
+Liquid Grey Clearcoat Metallic: $0.00
+Infra-Red Clearcoat: $0.00
+Grabber Green Clearcoat Metallic: $0.00
+Sangria Red Clearcoat Metallic: $0.00
+French Blue Clearcoat Metallic: $0.00
+Twilight Blue Clearcoat Metallic: $0.00
+CD Silver Clearcoat Metallic: $0.00
+Cloud 9 White Clearcoat: $0.00
+
+#Transmission: 
+Automatic: $0.00
+Standard: $-815.00
+
+#Brakes/Traction Control: 
+Standard: $0.00
+ABS: $400.00
+ABS with Advance Trac: $1625.00
+
+#Side Impact Airbags: 
+None: $0.00
+Selected: $350.00
+
+#Power Moonroof: 
+None: $0.00
+Selected: $595.00
+
+--------------------------------------------
+Press any key to set up your own car!
+
+Please choose the Color
+1. Fort Knox Gold Clearcoat Metallic. Price: $0.0
+2. Liquid Grey Clearcoat Metallic. Price: $0.0
+3. Liquid Grey Clearcoat Metallic. Price: $0.0
+4. Infra-Red Clearcoat. Price: $0.0
+5. Grabber Green Clearcoat Metallic. Price: $0.0
+6. Sangria Red Clearcoat Metallic. Price: $0.0
+7. French Blue Clearcoat Metallic. Price: $0.0
+8. Twilight Blue Clearcoat Metallic. Price: $0.0
+9. CD Silver Clearcoat Metallic. Price: $0.0
+10. Cloud 9 White Clearcoat. Price: $0.0
+2
+Please choose the Transmission
+1. Automatic. Price: $0.0
+2. Standard. Price: $-815.0
+1
+Please choose the Brakes/Traction Control
+1. Standard. Price: $0.0
+2. ABS. Price: $400.0
+3. ABS with Advance Trac. Price: $1625.0
+1
+Please choose the Side Impact Airbags
+1. None. Price: $0.0
+2. Selected. Price: $350.0
+2
+Please choose the Power Moonroof
+1. None. Price: $0.0
+2. Selected. Price: $595.0
+2
+Your car model has been set, Here is your car information:
+This is your model information: 
+Model name: Mini Copper
+Color: Liquid Grey Clearcoat Metallic: 0.0
+Transmission: Automatic: 0.0
+Brakes/Traction Control: Standard: 0.0
+Side Impact Airbags: Selected: 350.0
+Power Moonroof: Selected: 595.0
+Next is your model total price: 
+Total price: $15945.0
+Do you want to upload car model or configure a car? y/n?
+n

@@ -1,0 +1,32 @@
+Listen to server port #8888
+Server waiting to connect!
+Client: OK! Connected!
+Server: Successfully get output and input stream!
+User input is: 1
+Client: Sending properties file....
+Mobile sets size is: 1
+Client: OK! Connected!
+Server: Successfully get output and input stream!
+User input is: 1
+Client: Sending properties file....
+Mobile sets size is: 2
+Client: OK! Connected!
+Server: Successfully get output and input stream!
+User input is: 1
+Client: Sending properties file....
+Mobile sets size is: 3
+Client: OK! Connected!
+Server: Successfully get output and input stream!
+User input is: 1
+Client: Sending txt file....
+Accepting data....
+Data Accepted!
+Mobile sets size is: 4
+Client: OK! Connected!
+Server: Successfully get output and input stream!
+User input is: 2
+User choose car model X5
+Client: OK! Connected!
+Server: Successfully get output and input stream!
+User input is: 2
+User choose car model Mini Copper

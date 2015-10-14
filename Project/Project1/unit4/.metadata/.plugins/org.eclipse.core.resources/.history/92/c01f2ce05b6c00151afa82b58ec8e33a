@@ -1,0 +1,8 @@
+package server;
+
+import java.util.Properties;
+
+public interface AutoServer {
+	public void buildAutoFromProperty(Properties properties);
+	public void provideModelsToClient();
+}

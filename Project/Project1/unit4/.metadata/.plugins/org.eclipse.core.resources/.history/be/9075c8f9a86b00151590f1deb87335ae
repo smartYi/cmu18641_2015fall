@@ -1,0 +1,15 @@
+package server;
+
+import model.Automobile;
+
+public class BuildCarModelOptions implements AutoServer{
+	
+	private static Automobile automobile = null;
+	
+	public BuildCarModelOptions() {
+		
+	}
+	public void buildFromProperty() {
+		
+	}
+}

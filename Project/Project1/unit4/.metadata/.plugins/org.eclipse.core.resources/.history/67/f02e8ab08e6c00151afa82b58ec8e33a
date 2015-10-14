@@ -1,0 +1,11 @@
+package server;
+
+import java.util.LinkedHashMap;
+import java.util.Properties;
+
+import model.Automobile;
+
+public interface AutoServer {
+	public void buildAutoFromProperty(Properties properties);
+	public LinkedHashMap<String, Automobile> provideModelsToClient();
+}

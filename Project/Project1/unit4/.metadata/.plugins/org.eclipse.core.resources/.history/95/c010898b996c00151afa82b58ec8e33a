@@ -1,0 +1,9 @@
+package server;
+
+public class Server {	
+	//Main function for server.
+	public static void main(String[] args) {
+		DefaultSocketClient defaultSocketClient = new DefaultSocketClient();
+		defaultSocketClient.start();
+	}
+}

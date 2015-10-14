@@ -1,0 +1,151 @@
+package server;
+
+import java.net.*;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Properties;
+
+import model.Automobile;
+
+import java.io.*;
+
+public class DefaultSocketClient extends Thread {
+
+	private static final int PORT = 8888;
+	BuildCarModelOptions buildCarModelOptions = null;
+
+	// Thread run.
+	public void run() {
+		ServerSocket serverSocket = null;
+		// Create a server.
+		try {
+			serverSocket = new ServerSocket(PORT);
+		} catch (IOException exception) {
+			System.out.println("Could not listen to port: #" + PORT);
+			exception.printStackTrace();
+			System.exit(1);
+		}
+		System.out.println("Listen to server port #" + PORT);
+		System.out.println("Server waiting to connect!");
+
+		try {
+			Socket socket = null;
+			while (true) {
+				socket = serverSocket.accept();
+				handleSession(socket);
+				socket.close();
+			}
+		} catch (IOException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}// run
+
+	public void handleSession(Socket socket) {
+		try {
+			PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true);
+			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+			ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
+			ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
+			DataInputStream dis = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
+			printWriter.println("Server: I am server, ready to connect!");
+			printWriter.flush();
+			System.out.println(bufferedReader.readLine());
+			System.out.println("Server: Successfully get output and input stream!");
+
+			// Get user input to decide to upload a car model or configure a
+			// car.
+			String userInput;
+			userInput = bufferedReader.readLine();
+			System.out.println("User input is: " + userInput);
+
+			// If user input is 1, the upload a car model.
+			if (userInput.equals("1")) {
+				while (true) {
+					// Accept the car model is added or not
+					String isBuilt = bufferedReader.readLine();
+
+					if (isBuilt.equals("false")) {
+
+						String fileType = bufferedReader.readLine();
+						if (fileType.equals("properties")) {
+							// Get a properties file from client and use this
+							// file to build a car model.
+							System.out.println(bufferedReader.readLine());
+							Properties properties = (Properties) ois.readObject();
+							printWriter.println("Server: Properties file accepted!");
+							printWriter.println("Server: Build automobile model....");
+							buildCarModelOptions = new BuildCarModelOptions();
+							buildCarModelOptions.buildAutoFromProperty(properties);
+							printWriter.println("Server: Car model build completed!");
+						}
+						if (fileType.equals("txt")) {
+							System.out.println(bufferedReader.readLine());
+							int bufferSize = 10240;
+							byte[] buf = new byte[bufferSize];
+							String fileName = dis.readUTF();
+							DataOutputStream fileOut = new DataOutputStream(
+									new BufferedOutputStream(new FileOutputStream(fileName)));
+
+							System.out.println("Accepting data....");
+							System.out.println("Data Accepted!");
+
+							int read = 0;
+							read = dis.read(buf);
+							fileOut.write(buf, 0, read);
+
+							fileOut.close();
+
+							printWriter.println("Server: Txt file accepted!");
+							printWriter.println("Server: Build automobile model....");
+							buildCarModelOptions = new BuildCarModelOptions();
+							buildCarModelOptions.buildAutoFromTxt(fileName);
+							printWriter.println("Server: Car model build completed!");
+						}
+
+						// Accept user's input, if user input no, break.
+						String again = bufferedReader.readLine();
+						if (again.equals("n")) {
+							break;
+						} else {
+							continue;
+						}
+					} else {
+						System.out.println("The car model has been added");
+						// Accept user's input, if user input no, break.
+						String again = bufferedReader.readLine();
+						if (again.equals("n")) {
+							break;
+						} else {
+							continue;
+						}
+					}
+				}
+			} else if (userInput.equals("2")) {
+				LinkedHashMap<String, Automobile> mobileSets = buildCarModelOptions.provideModelsToClient();
+				Iterator<String> iterator = mobileSets.keySet().iterator();
+				while (iterator.hasNext()) {
+					String modelName = (String) iterator.next();
+					Automobile automobile = mobileSets.get(modelName);
+					printWriter.println(automobile.getMake() + " " + automobile.getModel() + " Base price is: "
+							+ automobile.getBasePrice());
+					printWriter.flush();
+					if (!iterator.hasNext()) {
+						printWriter.println("");
+						printWriter.flush();
+					}
+				}
+				String userModel = bufferedReader.readLine();
+				while (userModel != null) {
+					System.out.println("User choose car model " + userModel);
+					oos.writeObject(mobileSets.get(userModel));
+					oos.flush();
+					break;
+				}
+			}
+		} catch (Exception e) {
+			System.out.println("Server: Can not open session!");
+		}
+	}
+
+}

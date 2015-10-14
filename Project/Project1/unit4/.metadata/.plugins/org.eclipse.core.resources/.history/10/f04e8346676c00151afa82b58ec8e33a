@@ -1,0 +1,16 @@
+package client;
+
+import java.util.ArrayList;
+
+import model.Automobile;
+import model.Optionset;
+
+public class SelectCarOption {
+	
+	public void setChoice(Automobile automobile) {
+		ArrayList<Optionset> set = automobile.getOptionSets();
+		for(int i=0;i<set.size();i++) {
+			ArrayList<Option> option = set.g
+		}
+	}
+}

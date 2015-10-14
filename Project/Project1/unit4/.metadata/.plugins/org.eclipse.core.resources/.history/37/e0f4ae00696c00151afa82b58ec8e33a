@@ -1,0 +1,31 @@
+package client;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+import model.Automobile;
+import model.Optionset;
+import model.*;
+
+public class SelectCarOption {
+	
+	public void setChoice(Automobile automobile) {
+		BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
+		ArrayList<Optionset> set = automobile.getOptionSets();
+		for(int i=0;i<set.size();i++) {
+			System.out.println("Please choose the " + set.get(i).getName());
+			for(int j=0;j<set.get(i).getOpt().size();j++) {
+				System.out.println((i+1) + ". " + set.get(i).getOpt().get(j).getName() + ". Price: $"
+						+ set.get(i).getOpt().get(j).getPrice());
+			}
+			try{
+				int choice = Integer.parseInt(stdIn.readLine());
+				automobile.setOptionChoice(set.get(i).getName(), set.get(i).getOpt().get(choice-1).getName());
+			}catch(IOException exception) {
+				exception.printStackTrace();
+			}
+		}
+	}
+}

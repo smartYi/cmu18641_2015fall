@@ -1,0 +1,45 @@
+Listen to server port #8888
+Server waiting to connect!
+Server: Successfully get output and input stream!
+User input is: 1
+Client: Sending properties file....
+Mobile sets size is: 1
+Server: Successfully get output and input stream!
+1
+User input is: 1
+Client: Sending properties file....
+Mobile sets size is: 2
+Server: Successfully get output and input stream!
+User input is: 1
+Client: Sending properties file....
+Mobile sets size is: 3
+Server: Successfully get output and input stream!
+User input is: 1
+Client: Sending txt file....
+Accepting data....
+Data Accepted!
+Mobile sets size is: 4
+Server: Successfully get output and input stream!
+User input is: getList
+Server: Successfully get output and input stream!
+User input is: config
+Server: Successfully get output and input stream!
+User input is: config
+Server: Successfully get output and input stream!
+User input is: getList
+Server: Successfully get output and input stream!
+User input is: config
+Server: Successfully get output and input stream!
+User input is: config
+Server: Successfully get output and input stream!
+User input is: getList
+Server: Successfully get output and input stream!
+User input is: config
+Server: Successfully get output and input stream!
+User input is: config
+Server: Successfully get output and input stream!
+User input is: getList
+Server: Successfully get output and input stream!
+User input is: config
+Server: Successfully get output and input stream!
+User input is: config

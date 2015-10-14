@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="server.Server" x="292" y="634">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="true" constructors-accepted="true"/>
+    </Class>
+    <Class name="server.BuildCarModelOptions" x="24" y="748">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="server.AutoServer"/>
+        <Association destinationClassName="adapter.BuildAuto"
+            endpointName="buildAuto" kind="Simple"/>
+        <Communication destinationClassName="adapter.ProxyAutomobile"/>
+    </Class>
+    <Class name="adapter.CreateAuto" x="232" y="56">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="server.DefaultSocketClient" x="-294" y="736">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="true"
+            accessors-accepted="true" constructors-accepted="true"/>
+        <Association destinationClassName="server.BuildCarModelOptions"
+            endpointName="buildCarModelOptions" kind="Simple"/>
+        <Communication destinationClassName="server.BuildCarModelOptions"/>
+    </Class>
+    <Class name="adapter.EditAuto" x="-185" y="60">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="model.Optionset" x="894" y="349">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="model.Optionset.Option"
+            endpointName="opt" kind="Simple"/>
+        <Association destinationClassName="model.Optionset.Option"
+            endpointName="choice" kind="Simple"/>
+        <Communication destinationClassName="model.Optionset.Option"/>
+    </Class>
+    <Class name="adapter.BuildAuto" x="153" y="207">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="adapter.CreateAuto"/>
+        <Extension destinationClassName="adapter.EditAuto"/>
+        <Extension destinationClassName="adapter.UpdateAuto"/>
+        <Extension destinationClassName="adapter.ProxyAutomobile"/>
+        <Extension destinationClassName="server.AutoServer"/>
+    </Class>
+    <Class name="util.Util" x="657" y="652">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="model.Automobile"/>
+    </Class>
+    <Class name="adapter.UpdateAuto" x="-230" y="220">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="model.Optionset.Option" x="699" y="349">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="model.Automobile" x="692" y="39">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="model.Optionset"
+            endpointName="optionSets" kind="Simple"/>
+        <Association destinationClassName="model.Optionset.Option"
+            endpointName="choice" kind="Simple"/>
+        <Communication destinationClassName="model.Optionset"/>
+        <Communication destinationClassName="model.Optionset.Option"/>
+    </Class>
+    <Class name="adapter.ProxyAutomobile" x="247" y="242">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="model.Automobile"
+            endpointName="myobj" kind="Simple"/>
+        <Communication destinationClassName="util.Util"/>
+        <Communication destinationClassName="model.Automobile"/>
+    </Class>
+    <Class name="server.AutoServer" x="-256" y="562">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Note x="-292" y="318">In this project, ProxyAutoMobile also implements AutoServer in package server.</Note>
+    <Note x="-306" y="838">pacage server is associated with BuildAuto in package model. Also DefaultSocketClient is associated with BuildModelOptions</Note>
+    <Note x="623" y="768">package util read different file types to build Automobile</Note>
+    <Note x="666" y="-6">The class relationship between AutoMobile and ProxyAutomobile is association</Note>
+    <Note x="267" y="584">Server.java drive all the package</Note>
+</ClassDiagram>
